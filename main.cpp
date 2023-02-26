@@ -12,6 +12,7 @@ void dz_4_3() {
 
 	if (n > 100) {
 		printf("Количество элементов не может быть больше 100 \n");
+		return dz_4_3();
 	}
 
 	srand(time(NULL));
@@ -41,7 +42,7 @@ void dz_4_4() {
 	int n, min, max;
 	float sum = 0;
 	float sr_ar;
-	int array[100];
+	int array[10000000000000];
 
 	printf("Введите количество элементов в массиве для дз 4.4:  ");
 	scanf("%d", &n);
