@@ -72,8 +72,8 @@ void dz_4_4() {
 
 	sr_ar = sum / n;
 
-	printf("Максимальное: %d\n", min);
-	printf("Минимальное: %d\n", max);
+	printf("Минимальное: %d\n", min);
+	printf("Максимальное: %d\n", max);
 	printf("сумма: %.2f\n", sum);
 	printf("Среднее арифметическое: %.2f\n", sr_ar);
 
