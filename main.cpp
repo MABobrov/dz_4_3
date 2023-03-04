@@ -12,7 +12,6 @@ void dz_4_3() {
 
 	if (n > 100) {
 		printf("Количество элементов не может быть больше 100 \n");
-		return dz_4_3();
 	}
 
 	srand(time(NULL));
@@ -38,51 +37,53 @@ void dz_4_3() {
 
 }
 
+
 void dz_4_4() {
-	int n, min, max;
+	int n, i;
 	float sum = 0;
 	float sr_ar;
-	int array[10000000000000];
+	int min, max;
+	int arr[100];
 
 	printf("Введите количество элементов в массиве для дз 4.4:  ");
 	scanf("%d", &n);
 
 
+
 	printf("Введите %d чисел:\n", n);
-	for (int i = 0; i < n; i++) {
-		scanf("%d", &array[i]);
+	for (i = 0; i < n; i++) {
+		scanf("%d", &arr[i]);
 	}
 
-	// находим минимальное и максимальное значения
-	min = max = array[0];
-	for (int i = 1; i < n; i++) {
-		if (array[i] < min) {
-			min = array[i];
+	min = arr[0];
+	max = arr[0];
+	for (i = 1; i < n; i++) {
+		if (arr[i] < min) {
+			min = arr[i];
 		}
-		if (array[i] > max) {
-			max = array[i];
+		if (arr[i] > max) {
+			max = arr[i];
 		}
 	}
 
-	// находим сумму всех элементов
-	for (int i = 0; i < n; i++) {
-		sum += array[i];
+	for (i = 0; i < n; i++) {
+		sum += arr[i];
 	}
 
-	// находим среднее арифметическое
 	sr_ar = sum / n;
 
-
-	printf("Минимальное: %d\n", min);
-	printf("Максимальное: %d\n", max);
-	printf("Сумма: %.2f\n", sum);
+	printf("Максимальное: %d\n", min);
+	printf("Минимальное: %d\n", max);
+	printf("сумма: %.2f\n", sum);
 	printf("Среднее арифметическое: %.2f\n", sr_ar);
+
 
 
 }
 
 int main(void)
 {
-	dz_4_3();dz_4_4();
+	dz_4_3();
+	dz_4_4();
 	return 0;
 }
